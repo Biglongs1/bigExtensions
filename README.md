@@ -53,6 +53,19 @@ Sources live in `src/<lang>/<name>` and follow the same conventions as [keiyoush
 
 If a source is broken and you know why but do not want to write the fix, say so in the issue. A pointer to the request that changed is usually most of the work.
 
+## Support
+
+Issues are the best place for anything about a source, since it stays searchable for whoever hits the same problem later. For everything else, reach me here:
+
+<p align="left">
+  <a href="https://discord.com/users/1254123038656430189">
+    <img alt="Discord" src="https://img.shields.io/badge/Discord-biglongs-5865F2?style=for-the-badge&logo=discord&logoColor=white">
+  </a>
+  <a href="https://t.me/donttry999">
+    <img alt="Telegram" src="https://img.shields.io/badge/Telegram-%40donttry999-26A5E4?style=for-the-badge&logo=telegram&logoColor=white">
+  </a>
+</p>
+
 ## Credits
 
 Build infrastructure comes from [keiyoushi/extensions-source](https://github.com/keiyoushi/extensions-source), under Apache 2.0.
