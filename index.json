@@ -1,1 +1,96 @@
-{"extensionList":{"extensions":[]}}
+{
+  "name": "BigLongs",
+  "badgeLabel": "BIG",
+  "signingKey": "8a6ca214f361cd7f23bd67304c6297e8ac89977be0368fe17e32ee51ff09e9d2",
+  "contact": {
+    "website": "https://github.com/Biglongs1/extensions"
+  },
+  "extensionList": {
+    "extensions": [
+      {
+        "name": "KuroMangas",
+        "packageName": "eu.kanade.tachiyomi.extension.pt.kuromangas",
+        "resources": {
+          "apkUrl": "https://github.com/Biglongs1/extensions/releases/download/0812201/tachiyomi-pt.kuromangas-v1.4.11.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/extensions@main/src/pt/kuromangas/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/Biglongs1/extensions/releases/download/0812201/tachiyomi-pt.kuromangas-v1.4.11.jar"
+        },
+        "extensionLib": "1.4",
+        "versionCode": "11",
+        "versionName": "1.4.11",
+        "contentWarning": "CONTENT_WARNING_SAFE",
+        "sources": [
+          {
+            "id": "73579729889528478",
+            "name": "KuroMangas",
+            "language": "pt-BR",
+            "homeUrl": "https://kuromangas.com"
+          }
+        ]
+      },
+      {
+        "name": "MangaLivre.org",
+        "packageName": "eu.kanade.tachiyomi.extension.pt.mangalivreorg",
+        "resources": {
+          "apkUrl": "https://github.com/Biglongs1/extensions/releases/download/0812201/tachiyomi-pt.mangalivreorg-v1.6.6.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/extensions@main/src/pt/mangalivreorg/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/Biglongs1/extensions/releases/download/0812201/tachiyomi-pt.mangalivreorg-v1.6.6.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "6",
+        "versionName": "1.6.6",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "4160203623654115966",
+            "name": "MangaLivre.org",
+            "language": "pt-BR",
+            "homeUrl": "https://mangalivre.org"
+          }
+        ]
+      },
+      {
+        "name": "NoxManga",
+        "packageName": "eu.kanade.tachiyomi.extension.pt.remangas",
+        "resources": {
+          "apkUrl": "https://github.com/Biglongs1/extensions/releases/download/0812201/tachiyomi-pt.remangas-v1.6.54.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/extensions@main/src/pt/remangas/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/Biglongs1/extensions/releases/download/0812201/tachiyomi-pt.remangas-v1.6.54.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "54",
+        "versionName": "1.6.54",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "7462657023971681136",
+            "name": "NoxManga",
+            "language": "pt-BR",
+            "homeUrl": "https://noxmangas.org"
+          }
+        ]
+      },
+      {
+        "name": "Yomu Comics",
+        "packageName": "eu.kanade.tachiyomi.extension.pt.sssscanlator",
+        "resources": {
+          "apkUrl": "https://github.com/Biglongs1/extensions/releases/download/0812201/tachiyomi-pt.sssscanlator-v1.6.60.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/extensions@main/src/pt/sssscanlator/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/Biglongs1/extensions/releases/download/0812201/tachiyomi-pt.sssscanlator-v1.6.60.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "60",
+        "versionName": "1.6.60",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "1497838059713668619",
+            "name": "Yomu Comics",
+            "language": "pt-BR",
+            "homeUrl": "https://yomu.com.br"
+          }
+        ]
+      }
+    ]
+  }
+}
