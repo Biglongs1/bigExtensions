@@ -1,0 +1,155 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**'
+      - '!**.md'
+      - '!.github/**'
+      - '.github/scripts/**'
+      - '.github/workflows/build_push.yml'
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+env:
+  CI_CHUNK_SIZE: 80
+  IS_PR_CHECK: false
+
+jobs:
+  prepare:
+    name: Prepare job
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      matrix: ${{ steps.generate-matrices.outputs.matrix }}
+      delete: ${{ steps.generate-matrices.outputs.delete }}
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Get last successful CI commit
+        uses: nrwl/nx-set-shas@v4
+        with:
+          fallback-sha: 4b825dc642cb6eb9a060e54bf8d69288fbee4904 # empty tree
+
+      - id: generate-matrices
+        name: Create output matrices
+        run: python ./.github/scripts/generate-build-matrices.py "$NX_BASE"
+
+  build:
+    name: Build extensions (${{ matrix.chunk.number }})
+    needs: prepare
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    if: ${{ toJson(fromJson(needs.prepare.outputs.matrix).chunk) != '[]' }}
+    strategy:
+      matrix: ${{ fromJSON(needs.prepare.outputs.matrix) }}
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: temurin
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-read-only: ${{ matrix.chunk.number > 1 }}
+
+      - name: Prepare signing key
+        env:
+          SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
+        run: echo "$SIGNING_KEY" | base64 -d > signingkey.jks
+
+      - name: Build extensions (${{ matrix.chunk.number }})
+        env:
+          MODULES: ${{ join(matrix.chunk.modules, ' ') }}
+          ALIAS: ${{ secrets.ALIAS }}
+          KEY_STORE_PASSWORD: ${{ secrets.KEY_STORE_PASSWORD }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: |
+          TASKS=()
+          for module in $MODULES; do
+            TASKS+=("${module}:assembleRelease")
+          done
+          ./gradlew "${TASKS[@]}"
+
+      - name: Upload APKs (${{ matrix.chunk.number }})
+        uses: actions/upload-artifact@v4
+        with:
+          name: "individual-apks-${{ matrix.chunk.number }}"
+          path: |
+            **/build/outputs/apk/release/*.apk
+            **/build/keiyoushi-source-info.json
+          retention-days: 1
+
+      - name: Clean up CI files
+        if: always()
+        run: rm -f signingkey.jks
+
+  publish:
+    name: Publish extension repo
+    needs: [prepare, build]
+    if: >-
+      always() &&
+      needs.prepare.result == 'success' &&
+      needs.build.result != 'failure' &&
+      needs.build.result != 'cancelled'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: write
+    steps:
+      - name: Download APK artifacts
+        if: needs.build.result == 'success'
+        uses: actions/download-artifact@v4
+        with:
+          path: ~/apk-artifacts
+
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main
+          persist-credentials: false
+
+      - name: Checkout repo branch
+        uses: actions/checkout@v4
+        with:
+          ref: repo
+          path: repo
+          persist-credentials: true
+
+      - name: Publish and deploy repo
+        env:
+          DELETE: ${{ needs.prepare.outputs.delete }}
+          GH_TOKEN: ${{ github.token }}
+          SIGNING_KEY_FINGERPRINT: ${{ secrets.SIGNING_KEY_FINGERPRINT }}
+        run: |
+          cd repo
+          pip install protobuf
+          python -u ../main/.github/scripts/publish-repo.py "$DELETE" "$GITHUB_SHA"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add .
+            git commit -m "Update extensions repo"
+            git push
+          else
+            echo "No changes to commit"
+          fi
