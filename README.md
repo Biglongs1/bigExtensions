@@ -7,7 +7,7 @@ Extensões de mangá para [Mihon](https://mihon.app) e forks.
 Mihon 0.20.1+ / Aniyomi: adicione a URL do repositório em **Mais → Configurações → Navegar → Repositórios de extensões**:
 
 ```
-https://raw.githubusercontent.com/Biglongs1/extensions/repo/index.min.json
+https://raw.githubusercontent.com/Biglongs1/extensions/repo/index.json
 ```
 
 ## Fontes
