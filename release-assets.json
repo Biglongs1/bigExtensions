@@ -11,12 +11,12 @@
   },
   "eu.kanade.tachiyomi.extension.pt.mangalivreorg": {
     "apk": {
-      "name": "tachiyomi-pt.mangalivreorg-v1.6.6.apk",
-      "sha256": "c8e859694348d4ebdcb391482bef6510326ef79091bffbd5de3747a896a90327"
+      "name": "tachiyomi-pt.mangalivreorg-v1.6.7.apk",
+      "sha256": "baa37d2daf0ecca7d67450a090a4278f13a7b6a576b3a4564d2a2ae501ff6a28"
     },
     "jar": {
-      "name": "tachiyomi-pt.mangalivreorg-v1.6.6.jar",
-      "sha256": "116cdbbb62ba881c948ecc81420d93e8761ae623a9663efa0ddb6cec3908e442"
+      "name": "tachiyomi-pt.mangalivreorg-v1.6.7.jar",
+      "sha256": "0d9cf8831af907e062e49ba02b8bf39f9029e4ea38311498f39c2a805d5100f3"
     }
   },
   "eu.kanade.tachiyomi.extension.pt.remangas": {
@@ -31,12 +31,12 @@
   },
   "eu.kanade.tachiyomi.extension.pt.sssscanlator": {
     "apk": {
-      "name": "tachiyomi-pt.sssscanlator-v1.6.60.apk",
-      "sha256": "d401d28bcb2ef428bca7dd851461ad787be1cfa414622a55c14cb235e81137df"
+      "name": "tachiyomi-pt.sssscanlator-v1.6.61.apk",
+      "sha256": "1ba4ca7365ffa1e869d0808bd9cfe36aef474982ebea74b1f2a2acff092a091d"
     },
     "jar": {
-      "name": "tachiyomi-pt.sssscanlator-v1.6.60.jar",
-      "sha256": "a14cb2d23612e8af97aab37d264aeadd981c944fae036271ae859084db49acde"
+      "name": "tachiyomi-pt.sssscanlator-v1.6.61.jar",
+      "sha256": "bed7af2ac4f9214906cb22e1a8c214d05cfeae66f48ea6951f44039ed6509e85"
     }
   }
 }
