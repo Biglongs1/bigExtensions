@@ -1,0 +1,62 @@
+name: Broken source
+description: Report a source that stopped working
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      placeholder: Yomu Comics
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Extension version
+      description: Shown under Browse → Extensions.
+      placeholder: 1.6.60
+    validations:
+      required: true
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: What is broken
+      description: These break independently of each other, so pick the first step that fails.
+      options:
+        - Browsing (popular or latest)
+        - Search
+        - Manga details
+        - Chapter list
+        - Reading pages
+        - Everything
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: What happens
+      description: Include the error shown in the app, word for word, if there is one.
+    validations:
+      required: true
+
+  - type: input
+    id: entry
+    attributes:
+      label: Affected entry
+      description: Link to a manga where it happens. Leave blank if it affects every entry.
+
+  - type: checkboxes
+    id: acknowledgements
+    attributes:
+      label: Acknowledgements
+      options:
+        - label: I am on the latest version of the extension.
+          required: true
+        - label: The site itself works in a browser.
+          required: true
+        - label: I searched the existing issues and this was not reported before.
+          required: true

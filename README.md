@@ -1,56 +1,55 @@
 # Extensions
 
-Extensões de mangá para [Mihon](https://mihon.app) e forks.
+Manga sources for [Mihon](https://mihon.app) and forks.
 
-## Adicionar no app
+## Install
 
-Mihon 0.20.1+ / Aniyomi: adicione a URL do repositório em **Mais → Configurações → Navegar → Repositórios de extensões**:
+Open **More → Settings → Browse → Extension repos** and add:
 
 ```
 https://raw.githubusercontent.com/Biglongs1/extensions/repo/index.json
 ```
 
-## Fontes
+The app will list every source below. Updates arrive through the same screen.
 
-| Fonte | Idioma |
+## Sources
+
+| Source | Language |
 | --- | --- |
 | KuroMangas | pt-BR |
 | MangaLivre.org | pt-BR |
 | NoxManga | pt-BR |
 | Yomu Comics | pt-BR |
 
-## Desenvolvimento
+## Requests
 
-Requer JDK 17 e o Android SDK.
+Want a source that is not here? [Open a request](https://github.com/Biglongs1/extensions/issues/new?template=source_request.yml).
 
-```sh
-./gradlew :src:pt:<fonte>:assembleDebug
-```
+Before asking, check that the site is not already covered by [keiyoushi](https://github.com/keiyoushi/extensions), which is a far larger repo and the better home for most sources. This one exists for sources I maintain closely, so requests are accepted based on how reliably I can keep them alive, not on how popular the site is.
 
-O APK sai em `src/pt/<fonte>/build/outputs/apk/debug/`.
+A source is unlikely to be accepted when it:
 
-## Publicação
+- requires a paid account to read anything
+- hosts content that is not legally distributable
+- is a mirror of a site already listed here
 
-O workflow `build_push.yml` compila as extensões alteradas a cada push na `main`, assina, publica os APKs numa release e atualiza o índice na branch `repo`.
+## Reporting a broken source
 
-Secrets necessários:
+Sites change often, and a source that worked yesterday can break without notice. [Report it here](https://github.com/Biglongs1/extensions/issues/new?template=broken_source.yml) with the extension version and what exactly stopped working, since browsing, search and reading tend to break independently of each other.
 
-| Secret | Descrição |
-| --- | --- |
-| `SIGNING_KEY` | keystore `.jks` em base64 |
-| `ALIAS` | alias da chave |
-| `KEY_STORE_PASSWORD` | senha da keystore |
-| `KEY_PASSWORD` | senha da chave |
-| `SIGNING_KEY_FINGERPRINT` | SHA-256 do certificado, sem `:` e em minúsculas |
+## Contributing
 
-Gerar a keystore e obter o fingerprint:
+Pull requests are welcome, whether it is a fix for a broken source or a new one.
 
-```sh
-keytool -genkey -v -keystore signingkey.jks -keyalg RSA -keysize 2048 -validity 10000 -alias key
-keytool -list -v -keystore signingkey.jks -alias key | grep SHA256
-base64 -w 0 signingkey.jks
-```
+1. Fork the repo and branch off `main`.
+2. Make the change and bump `versionCode` in the source's `build.gradle.kts`, otherwise the app will not offer the update.
+3. Build and run it against a device before opening the PR.
+4. Open the PR and fill in the checklist.
 
-## Créditos
+Sources live in `src/<lang>/<name>` and follow the same conventions as [keiyoushi/extensions-source](https://github.com/keiyoushi/extensions-source), so its [CONTRIBUTING](https://github.com/keiyoushi/extensions-source/blob/main/CONTRIBUTING.md) applies here too and is worth reading before writing any code.
 
-A infraestrutura de build vem do [keiyoushi/extensions-source](https://github.com/keiyoushi/extensions-source), sob Apache 2.0.
+If a source is broken and you know why but do not want to write the fix, say so in the issue. A pointer to the request that changed is usually most of the work.
+
+## Credits
+
+Build infrastructure comes from [keiyoushi/extensions-source](https://github.com/keiyoushi/extensions-source), under Apache 2.0.

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Source available elsewhere
+    url: https://github.com/keiyoushi/extensions
+    about: Most sources live in keiyoushi. Check there before requesting one here.
+  - name: App bug
+    url: https://github.com/mihonapp/mihon/issues
+    about: Crashes, library or reader problems are Mihon issues, not extension issues.
