@@ -105,7 +105,8 @@ abstract class YomuComics : KeiSource() {
     private fun SChapter.location(): Pair<String, String> {
         val slug = memo["slug"]?.stringOrNull
         val number = memo["number"]?.stringOrNull
-        if (slug == null || number == null) throw Exception("Atualize a lista de capítulos")
+        // Apps that don't persist `memo` never get here with data, no matter how often the list is refreshed.
+        if (slug == null || number == null) throw Exception("Atualize a lista de capítulos. Se continuar, atualize o app.")
 
         return slug to number
     }
