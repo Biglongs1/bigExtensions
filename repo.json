@@ -1,0 +1,9 @@
+{
+    "index_v2":  "https://github.com/Biglongs1/extensions/raw/repo/index.pb",
+    "meta":  {
+                 "name":  "BigLongs",
+                 "shortName":  "BIG",
+                 "website":  "https://github.com/Biglongs1/extensions",
+                 "signingKeyFingerprint":  "8a6ca214f361cd7f23bd67304c6297e8ac89977be0368fe17e32ee51ff09e9d2"
+             }
+}
