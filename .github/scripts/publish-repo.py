@@ -21,6 +21,7 @@ REPO_DIR = Path.cwd()
 
 ICON_BASE_URL = "https://cdn.jsdelivr.net/gh/Biglongs1/extensions@main"
 RELEASE_BASE_URL = f"https://github.com/{REPO_NAME}/releases/download"
+OUTDATED_NOTICE = "Atualize o app para instalar as extensões"
 ASSET_LIMIT = 495  # Actual limit is 1000 but we upload 2 items per extension.
 UPLOAD_CHUNK_SIZE = 80
 UPLOAD_CHUNK_INTERVAL = 30
@@ -219,6 +220,34 @@ with REPO_DIR.joinpath("repo.json").open("w", encoding="utf-8") as f:
         },
         f,
         indent=2,
+    )
+    f.write("\n")
+
+# Apps too old for index.pb only read this file, so use it to tell them to update.
+with REPO_DIR.joinpath("index.min.json").open("w", encoding="utf-8") as f:
+    json.dump(
+        [
+            {
+                "name": OUTDATED_NOTICE,
+                "pkg": "eu.kanade.tachiyomi.extension.all.outdatedapp",
+                "apk": "tachiyomi-all.outdatedapp-v1.4.1.apk",
+                "lang": "all",
+                "code": 1,
+                "version": "1.4.1",
+                "nsfw": 0,
+                "sources": [
+                    {
+                        "name": OUTDATED_NOTICE,
+                        "lang": "all",
+                        "id": "1",
+                        "baseUrl": f"https://github.com/{REPO_NAME}",
+                    }
+                ],
+            }
+        ],
+        f,
+        indent=2,
+        ensure_ascii=False,
     )
     f.write("\n")
 

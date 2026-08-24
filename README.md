@@ -12,6 +12,9 @@ https://raw.githubusercontent.com/Biglongs1/extensions/repo/index.json
 
 The app will list every source below. Updates arrive through the same screen.
 
+Forks lag behind on repo support, so if the app rejects the URL, check that it is
+up to date. Yokai, for instance, only accepts this format from 1.10.0 onwards.
+
 ## Sources
 
 | Source | Language |
