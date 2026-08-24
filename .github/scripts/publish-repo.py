@@ -205,6 +205,23 @@ with REPO_DIR.joinpath("index.json").open("w", encoding="utf-8") as f:
 with REPO_DIR.joinpath("index.pb").open("wb") as f:
     f.write(gzip.compress(index.SerializeToString(deterministic=True), mtime=0))
 
+# Yokai and older Mihon builds resolve the repo through this file, not the index.
+with REPO_DIR.joinpath("repo.json").open("w", encoding="utf-8") as f:
+    json.dump(
+        {
+            "index_v2": f"https://github.com/{REPO_NAME}/raw/repo/index.pb",
+            "meta": {
+                "name": index.name,
+                "shortName": index.badgeLabel,
+                "website": index.contact.website,
+                "signingKeyFingerprint": index.signingKey,
+            },
+        },
+        f,
+        indent=2,
+    )
+    f.write("\n")
+
 with release_assets_path.open("w", encoding="utf-8") as f:
     json.dump(updated_release_assets, f, indent=2, sort_keys=True)
     f.write("\n")
