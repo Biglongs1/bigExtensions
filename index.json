@@ -11,13 +11,13 @@
         "name": "KuroMangas",
         "packageName": "eu.kanade.tachiyomi.extension.pt.kuromangas",
         "resources": {
-          "apkUrl": "https://github.com/Biglongs1/extensions/releases/download/eec552b/tachiyomi-pt.kuromangas-v1.4.12.apk",
+          "apkUrl": "https://github.com/Biglongs1/extensions/releases/download/0274d96/tachiyomi-pt.kuromangas-v1.4.13.apk",
           "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/extensions@main/src/pt/kuromangas/res/mipmap-xhdpi/ic_launcher.png",
-          "jarUrl": "https://github.com/Biglongs1/extensions/releases/download/eec552b/tachiyomi-pt.kuromangas-v1.4.12.jar"
+          "jarUrl": "https://github.com/Biglongs1/extensions/releases/download/0274d96/tachiyomi-pt.kuromangas-v1.4.13.jar"
         },
         "extensionLib": "1.4",
-        "versionCode": "12",
-        "versionName": "1.4.12",
+        "versionCode": "13",
+        "versionName": "1.4.13",
         "contentWarning": "CONTENT_WARNING_SAFE",
         "sources": [
           {
