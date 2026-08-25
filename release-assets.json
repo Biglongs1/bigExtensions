@@ -9,6 +9,16 @@
       "sha256": "b2151c59f33ac7e020b70b7019faad9acb2fe4cf9bbd5577448f8437c37bc7c8"
     }
   },
+  "eu.kanade.tachiyomi.extension.pt.loverstoon": {
+    "apk": {
+      "name": "tachiyomi-pt.loverstoon-v1.6.1.apk",
+      "sha256": "283b3d19e6c3fdd5742c0d23ecff97c025edf19d5c1dcc4d7288d3a1265064ab"
+    },
+    "jar": {
+      "name": "tachiyomi-pt.loverstoon-v1.6.1.jar",
+      "sha256": "60938ea24a51156caf4a4b0668d2c08bd80b64082acd15b53eacb695dccebf43"
+    }
+  },
   "eu.kanade.tachiyomi.extension.pt.mangalivreorg": {
     "apk": {
       "name": "tachiyomi-pt.mangalivreorg-v1.6.7.apk",
