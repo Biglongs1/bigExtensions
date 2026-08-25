@@ -23,9 +23,9 @@ import javax.crypto.spec.SecretKeySpec
 
 const val HOSTNAME_PART = "kuromangas.com::v2"
 const val ANTIBOT = "x9_4v2_b"
-const val DEFAULT_ENC_KEY = "i3ato8l6sai74432xsfE2oMmieshoforanuYTusF4jKdqEwhUEft9dsadcxzde3"
-const val NONCE_HEADER = "X-Session-Nonce"
-const val NONCE_PATH = "/api/auth/nonce"
+const val DEFAULT_ENC_KEY = "i67ato8l6sai74jyIHfE2oMmieshoforanuYTusF4jKdqEwhUEft9dsadcxzde3"
+const val NONCE_HEADER = "X-Client-Token"
+const val NONCE_PATH = "/api/auth/check"
 private const val HMAC_ALGORITHM = "HmacSHA256"
 private const val BODY_PEEK_BYTES = 512L
 private const val LOGIN_EXPIRED_MESSAGE = "Sessão recusada pelo site. Refaça o login no WebView ou revise email e senha nas configurações."
@@ -61,7 +61,7 @@ class KuroMangasDecryptor(
                 val reason = runCatching { response.peekBody(BODY_PEEK_BYTES).string() }.getOrDefault("")
                 response.close()
                 if (retried) throw IOException("$LOGIN_EXPIRED_MESSAGE (${response.code}) $reason")
-                reloadCredentials()
+                reloadSecret()
                 return execute(newRequest(), true)
             }
 
@@ -75,7 +75,7 @@ class KuroMangasDecryptor(
             if (decrypted == null) {
                 response.close()
                 if (retried) throw IOException("Failed to decrypt")
-                reloadCredentials()
+                reloadEncryptionKey()
                 return execute(newRequest(), true)
             }
             return response.newBuilder()
@@ -103,10 +103,13 @@ class KuroMangasDecryptor(
 
     private fun String.decodeHex(): ByteArray = ByteArray(length / 2) { substring(it * 2, it * 2 + 2).toInt(16).toByte() }
 
-    fun reloadCredentials() {
+    fun reloadSecret() {
         // The secret is only issued to a live session, so a rejected cookie requires a fresh login.
         sessionSecret = fetchSecret() ?: if (relogin()) fetchSecret() else null
+    }
 
+    // Only worth paying for on a decryption failure: the bundle weighs several megabytes.
+    fun reloadEncryptionKey() {
         val indexJsUrl = client.newCall(GET(baseUrl)).execute()
             .asJsoup()
             .selectFirst("script[src*=index]")
