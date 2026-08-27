@@ -53,13 +53,13 @@
         "name": "MangaLivre.org",
         "packageName": "eu.kanade.tachiyomi.extension.pt.mangalivreorg",
         "resources": {
-          "apkUrl": "https://github.com/Biglongs1/extensions/releases/download/7f242ba/tachiyomi-pt.mangalivreorg-v1.6.7.apk",
+          "apkUrl": "https://github.com/Biglongs1/extensions/releases/download/c5f4e37/tachiyomi-pt.mangalivreorg-v1.6.8.apk",
           "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/extensions@main/src/pt/mangalivreorg/res/mipmap-xhdpi/ic_launcher.png",
-          "jarUrl": "https://github.com/Biglongs1/extensions/releases/download/7f242ba/tachiyomi-pt.mangalivreorg-v1.6.7.jar"
+          "jarUrl": "https://github.com/Biglongs1/extensions/releases/download/c5f4e37/tachiyomi-pt.mangalivreorg-v1.6.8.jar"
         },
         "extensionLib": "1.6",
-        "versionCode": "7",
-        "versionName": "1.6.7",
+        "versionCode": "8",
+        "versionName": "1.6.8",
         "contentWarning": "CONTENT_WARNING_MIXED",
         "sources": [
           {
