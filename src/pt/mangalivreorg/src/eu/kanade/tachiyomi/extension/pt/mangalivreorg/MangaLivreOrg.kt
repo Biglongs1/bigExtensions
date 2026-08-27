@@ -23,6 +23,7 @@ import okhttp3.Headers
 import okhttp3.HttpUrl
 import okhttp3.HttpUrl.Companion.toHttpUrl
 import okhttp3.OkHttpClient
+import okhttp3.Response
 
 @Source
 abstract class MangaLivreOrg : KeiSource() {
@@ -47,7 +48,7 @@ abstract class MangaLivreOrg : KeiSource() {
             val url = "$API_URL/categories/series_list.json".toHttpUrl().newBuilder()
                 .addQueryParameter("id_category", category)
                 .build()
-            val results = client.get(url).parseAs<CategoryListDto>()
+            val results = apiGet(url).parseAs<CategoryListDto>()
 
             return MangasPage(results.series.map(ListItemDto::toSManga), hasNextPage = false)
         }
@@ -73,7 +74,7 @@ abstract class MangaLivreOrg : KeiSource() {
             .addQueryParameter("page", page.toString())
             .build()
 
-        val result = client.get(url).parseAs<MangaListDto>()
+        val result = apiGet(url).parseAs<MangaListDto>()
         return MangasPage(result.series.map(ListItemDto::toSManga), result.hasNextPage)
     }
 
@@ -93,7 +94,7 @@ abstract class MangaLivreOrg : KeiSource() {
         fetchDetails: Boolean,
         fetchChapters: Boolean,
     ): SMangaUpdate {
-        val details = client.get("$API_URL/mangas/${manga.url}").parseAs<MangaDetailsDto>()
+        val details = apiGet("$API_URL/mangas/${manga.url}").parseAs<MangaDetailsDto>()
 
         return SMangaUpdate(
             manga = details.manga.toSManga(),
@@ -101,20 +102,22 @@ abstract class MangaLivreOrg : KeiSource() {
         )
     }
 
-    override suspend fun getPageList(chapter: SChapter): List<Page> {
-        val url = "$API_URL/chapters/${chapter.url}"
+    override suspend fun getPageList(chapter: SChapter): List<Page> = apiGet("$API_URL/chapters/${chapter.url}").parseAs<ChapterPagesDto>().toPageList()
 
+    private var cachedNonce: String? = null
+
+    // Every API route validates the nonce, and it rotates on each site build, so a rejected
+    // request is retried once with a freshly scraped one.
+    private suspend fun apiGet(url: HttpUrl): Response {
         val response = client.get(url, nonceHeaders(), ensureSuccess = false)
-        if (response.isSuccessful) {
-            return response.parseAs<ChapterPagesDto>().toPageList()
-        }
+        if (response.isSuccessful) return response
 
         response.close()
         cachedNonce = null
-        return client.get(url, nonceHeaders()).parseAs<ChapterPagesDto>().toPageList()
+        return client.get(url, nonceHeaders())
     }
 
-    private var cachedNonce: String? = null
+    private suspend fun apiGet(url: String): Response = apiGet(url.toHttpUrl())
 
     private suspend fun nonceHeaders(): Headers {
         val nonce = cachedNonce ?: fetchNonce().also { cachedNonce = it }
@@ -153,7 +156,7 @@ abstract class MangaLivreOrg : KeiSource() {
     override val supportsFilterFetching: Boolean get() = true
 
     override suspend fun fetchFilterData(): JsonElement {
-        val genres = client.get("$API_URL/genres").parseAs<List<GenreDto>>()
+        val genres = apiGet("$API_URL/genres").parseAs<List<GenreDto>>()
         return FilterData(genres).toJsonElement()
     }
 
