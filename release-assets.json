@@ -21,12 +21,12 @@
   },
   "eu.kanade.tachiyomi.extension.pt.mangalivreorg": {
     "apk": {
-      "name": "tachiyomi-pt.mangalivreorg-v1.6.8.apk",
-      "sha256": "8140f1100d9f08990f5f81431daa01299cc27abe83f3f29bebaabda63a660199"
+      "name": "tachiyomi-pt.mangalivreorg-v1.6.9.apk",
+      "sha256": "65cf93738e989166576d492f7ade723d6a459ff2626b891c170d1fe0d5d2d4a0"
     },
     "jar": {
-      "name": "tachiyomi-pt.mangalivreorg-v1.6.8.jar",
-      "sha256": "befc1176c93f925089c06225117946a94669ea2f8d1857c10c394bb74edf5bf2"
+      "name": "tachiyomi-pt.mangalivreorg-v1.6.9.jar",
+      "sha256": "75390d83b2f8e3bf399514d9a7a16ef5ad33d530603a982e85ec7e4e5cfb694c"
     }
   },
   "eu.kanade.tachiyomi.extension.pt.remangas": {
