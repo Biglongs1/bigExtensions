@@ -1,6 +1,7 @@
 package eu.kanade.tachiyomi.extension.pt.mangalivreorg
 
 import android.util.Base64
+import eu.kanade.tachiyomi.network.await
 import eu.kanade.tachiyomi.source.model.FilterList
 import eu.kanade.tachiyomi.source.model.MangasPage
 import eu.kanade.tachiyomi.source.model.Page
@@ -23,6 +24,7 @@ import okhttp3.Headers
 import okhttp3.HttpUrl
 import okhttp3.HttpUrl.Companion.toHttpUrl
 import okhttp3.OkHttpClient
+import okhttp3.Request
 import okhttp3.Response
 
 @Source
@@ -106,22 +108,41 @@ abstract class MangaLivreOrg : KeiSource() {
 
     private var cachedNonce: String? = null
 
-    // Every API route validates the nonce, and it rotates on each site build, so a rejected
-    // request is retried once with a freshly scraped one.
+    // A rejected request means either a rotated nonce or a client the API has not seen announce
+    // itself yet, so the retry refreshes the nonce and sends the preflight the site always sends.
     private suspend fun apiGet(url: HttpUrl): Response {
         val response = client.get(url, nonceHeaders(), ensureSuccess = false)
         if (response.isSuccessful) return response
 
         response.close()
         cachedNonce = null
+        preflight(url)
+
         return client.get(url, nonceHeaders())
     }
 
     private suspend fun apiGet(url: String): Response = apiGet(url.toHttpUrl())
 
+    // The API answers "not found" to every protected route until the client sends a CORS
+    // preflight, which browsers do on their own because of the nonce header.
+    private suspend fun preflight(url: HttpUrl) {
+        val request = Request.Builder()
+            .url(url)
+            .method("OPTIONS", null)
+            .headers(
+                headers.newBuilder()
+                    .set("Access-Control-Request-Method", "GET")
+                    .set("Access-Control-Request-Headers", NONCE_HEADER.lowercase())
+                    .build(),
+            )
+            .build()
+
+        client.newCall(request).await().close()
+    }
+
     private suspend fun nonceHeaders(): Headers {
         val nonce = cachedNonce ?: fetchNonce().also { cachedNonce = it }
-        return headers.newBuilder().set("X-ML-Nonce", nonce).build()
+        return headers.newBuilder().set(NONCE_HEADER, nonce).build()
     }
 
     // The site keeps the nonce as a constant in its bundle and rotates it on every rebuild.
@@ -183,6 +204,7 @@ abstract class MangaLivreOrg : KeiSource() {
         private const val API_URL = "https://api.mangalivre.org/api/v1"
         private val MANGA_PATH_SEGMENTS = listOf("manga", "ler")
         private const val ASSIGNMENT_LENGTH = 300
+        private const val NONCE_HEADER = "X-ML-Nonce"
 
         // Matches both the plain header name and the array the bundle joins it from.
         private val NONCE_VARIABLE_REGEX = Regex("""(?:X-ML-Nonce|Nonce"]\.join\("-"\))"?]\s*=\s*(\w+)""")
