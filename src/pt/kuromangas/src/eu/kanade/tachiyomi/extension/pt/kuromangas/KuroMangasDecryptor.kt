@@ -8,7 +8,6 @@ import keiyoushi.utils.readIntBigEndian
 import keiyoushi.utils.readIntLittleEndian
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.jsonObject
-import okhttp3.Headers
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -18,15 +17,12 @@ import java.io.IOException
 import java.security.MessageDigest
 import java.time.LocalDate
 import java.time.ZoneOffset
-import javax.crypto.Mac
-import javax.crypto.spec.SecretKeySpec
 
 const val HOSTNAME_PART = "kuromangas.com::v2"
 const val ANTIBOT = "x9_4v2_b"
-const val DEFAULT_ENC_KEY = "i67ato8l6sai74jyIHfE2oMmieshoforanuYTusF4jKdqEwhUEft9dsadcxzde3"
-const val NONCE_HEADER = "X-Client-Token"
-const val NONCE_PATH = "/api/auth/check"
-private const val HMAC_ALGORITHM = "HmacSHA256"
+const val DEFAULT_ENC_KEY = "i67ato8l6sai74jyIHfE2oMmieshoforanuYTusF4jKdqEwhUEft9dsadcxzsaipnjm8"
+const val TOKEN_HEADER = "X-Client-Token"
+const val TOKEN_COOKIE = "_kn"
 private const val BODY_PEEK_BYTES = 512L
 private const val LOGIN_EXPIRED_MESSAGE = "Sessão recusada pelo site. Refaça o login no WebView ou revise email e senha nas configurações."
 
@@ -35,22 +31,17 @@ private val encKeyRegex = Regex("""ENCRYPTION_KEY\s*[:=]\s*["']([^"']+)["']""")
 class KuroMangasDecryptor(
     val baseUrl: String,
     val client: OkHttpClient,
-    val headers: Headers,
     val relogin: () -> Boolean,
 ) {
     private var viteApiEncKey: String? = DEFAULT_ENC_KEY
-
-    private var sessionSecret: String? = null
 
     fun vSecureInterceptor() = Interceptor { chain ->
 
         fun newRequest(): Request {
             val request = chain.request()
-            if (request.url.encodedPath.endsWith(NONCE_PATH)) return request
-
-            val secret = sessionSecret ?: fetchSecret()?.also { sessionSecret = it } ?: return request
+            val token = client.getCookie(baseUrl, TOKEN_COOKIE) ?: return request
             return request.newBuilder()
-                .header(NONCE_HEADER, signature(secret, request.method, request.url.encodedPath))
+                .header(TOKEN_HEADER, token)
                 .build()
         }
 
@@ -61,7 +52,7 @@ class KuroMangasDecryptor(
                 val reason = runCatching { response.peekBody(BODY_PEEK_BYTES).string() }.getOrDefault("")
                 response.close()
                 if (retried) throw IOException("$LOGIN_EXPIRED_MESSAGE (${response.code}) $reason")
-                reloadSecret()
+                relogin()
                 return execute(newRequest(), true)
             }
 
@@ -84,28 +75,6 @@ class KuroMangasDecryptor(
         }
 
         execute(newRequest(), false)
-    }
-
-    /** The site signs every call with `base64url(HMAC-SHA256(secret, "METHOD|path|epoch")).epoch`. */
-    private fun signature(secret: String, method: String, path: String): String {
-        val timestamp = System.currentTimeMillis() / 1000
-        val mac = Mac.getInstance(HMAC_ALGORITHM).apply {
-            init(SecretKeySpec(secret.decodeHex(), HMAC_ALGORITHM))
-        }
-        val digest = mac.doFinal("${method.uppercase()}|$path|$timestamp".toByteArray())
-        val encoded = Base64.encodeToString(digest, Base64.URL_SAFE or Base64.NO_PADDING or Base64.NO_WRAP)
-        return "$encoded.$timestamp"
-    }
-
-    private fun fetchSecret(): String? = runCatching {
-        client.newCall(GET(baseUrl + NONCE_PATH, headers)).execute().parseAs<NonceDto>().secret
-    }.getOrNull()
-
-    private fun String.decodeHex(): ByteArray = ByteArray(length / 2) { substring(it * 2, it * 2 + 2).toInt(16).toByte() }
-
-    fun reloadSecret() {
-        // The secret is only issued to a live session, so a rejected cookie requires a fresh login.
-        sessionSecret = fetchSecret() ?: if (relogin()) fetchSecret() else null
     }
 
     // Only worth paying for on a decryption failure: the bundle weighs several megabytes.

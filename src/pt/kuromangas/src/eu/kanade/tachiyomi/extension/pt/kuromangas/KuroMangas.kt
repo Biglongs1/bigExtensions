@@ -42,7 +42,7 @@ abstract class KuroMangas :
 
     private val cdnUrl = "https://cdn.kuromangas.com"
 
-    private val decryptor by lazy { KuroMangasDecryptor(baseUrl, network.client, headers, ::relogin) }
+    private val decryptor by lazy { KuroMangasDecryptor(baseUrl, network.client, ::relogin) }
 
     override val client by lazy {
 
