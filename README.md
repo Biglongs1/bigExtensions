@@ -17,13 +17,16 @@ up to date. Yokai, for instance, only accepts this format from 1.10.0 onwards.
 
 ## Sources
 
-| Source | Language |
-| --- | --- |
-| KuroMangas | pt-BR |
-| LoversToon | pt-BR |
-| MangaLivre.org | pt-BR |
-| NoxManga | pt-BR |
-| Yomu Comics | pt-BR |
+| Source | Language | Notes |
+| --- | --- | --- |
+| KuroMangas | pt-BR | Requires an account |
+| LoversToon | pt-BR | |
+| MangaLivre.org | pt-BR | |
+| NoxManga | pt-BR | |
+| Yomu Comics | pt-BR | Requires an account |
+
+Sources marked as requiring an account read nothing until you fill in the credentials
+under the extension settings.
 
 ## Requests
 

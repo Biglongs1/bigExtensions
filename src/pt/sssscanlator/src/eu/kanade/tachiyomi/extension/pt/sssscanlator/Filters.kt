@@ -27,10 +27,11 @@ class SortFilter :
         "Ordenar por",
         "sort",
         listOf(
-            "Mais recentes" to "newest",
             "Mais populares" to "popular",
+            "Atualizados" to "recent",
+            "Mais recentes" to "new",
             "Melhor nota" to "rating",
-            "A-Z" to "az",
+            "A-Z" to "alphabetical",
         ),
     )
 
@@ -40,18 +41,18 @@ class TypeFilter :
         "type",
         listOf(
             "Todos" to "",
-            "Mangá" to "MANGA",
-            "Manhwa" to "MANHWA",
-            "Manhua" to "MANHUA",
-            "Novel" to "NOVEL",
-            "Yaoi" to "YAOI",
-            "Yuri" to "YURI",
-            "Shoujo" to "SHOUJO",
-            "English" to "ENGLISH",
-            "Webtoon" to "WEBTOON",
-            "Doujinshi" to "DOUJINSHI",
-            "Hentai" to "HENTAI",
-            "Pornhwa" to "PORNHWA",
+            "Mangá" to "manga",
+            "Manhwa" to "manhwa",
+            "Manhua" to "manhua",
+            "Novel" to "novel",
+            "Yaoi" to "yaoi",
+            "Yuri" to "yuri",
+            "Shoujo" to "shoujo",
+            "English" to "english",
+            "Webtoon" to "webtoon",
+            "Doujinshi" to "doujinshi",
+            "Hentai" to "hentai",
+            "Pornhwa" to "pornhwa",
         ),
     )
 
@@ -61,10 +62,10 @@ class StatusFilter :
         "status",
         listOf(
             "Todos" to "",
-            "Em lançamento" to "ONGOING",
-            "Completo" to "COMPLETED",
-            "Hiato" to "HIATUS",
-            "Cancelado" to "CANCELED",
+            "Em lançamento" to "ongoing",
+            "Completo" to "completed",
+            "Hiato" to "hiatus",
+            "Cancelado" to "canceled",
         ),
     )
 
