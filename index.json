@@ -95,13 +95,13 @@
         "name": "Yomu Comics",
         "packageName": "eu.kanade.tachiyomi.extension.pt.sssscanlator",
         "resources": {
-          "apkUrl": "https://github.com/Biglongs1/extensions/releases/download/7f242ba/tachiyomi-pt.sssscanlator-v1.6.61.apk",
+          "apkUrl": "https://github.com/Biglongs1/extensions/releases/download/e676249/tachiyomi-pt.sssscanlator-v1.6.62.apk",
           "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/extensions@main/src/pt/sssscanlator/res/mipmap-xhdpi/ic_launcher.png",
-          "jarUrl": "https://github.com/Biglongs1/extensions/releases/download/7f242ba/tachiyomi-pt.sssscanlator-v1.6.61.jar"
+          "jarUrl": "https://github.com/Biglongs1/extensions/releases/download/e676249/tachiyomi-pt.sssscanlator-v1.6.62.jar"
         },
         "extensionLib": "1.6",
-        "versionCode": "61",
-        "versionName": "1.6.61",
+        "versionCode": "62",
+        "versionName": "1.6.62",
         "contentWarning": "CONTENT_WARNING_MIXED",
         "sources": [
           {
