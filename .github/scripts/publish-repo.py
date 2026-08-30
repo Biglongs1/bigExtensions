@@ -185,7 +185,7 @@ final_extensions.extend(ext for ext, _, _, _, _ in new_extensions)
 final_extensions.sort(key=lambda ext: ext.packageName)
 
 index = index_pb2.Index(
-    name="BigLongs",
+    name="bigExtensions",
     badgeLabel="BIG",
     signingKey=os.environ["SIGNING_KEY_FINGERPRINT"],
     contact=index_pb2.Contact(

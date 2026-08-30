@@ -1,4 +1,4 @@
-# Extensions
+# bigExtensions
 
 Manga sources for [Mihon](https://mihon.app) and forks.
 
