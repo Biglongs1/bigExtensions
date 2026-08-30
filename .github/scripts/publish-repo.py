@@ -184,6 +184,19 @@ final_extensions.extend(
 final_extensions.extend(ext for ext, _, _, _, _ in new_extensions)
 final_extensions.sort(key=lambda ext: ext.packageName)
 
+
+def rebase(url: str, base: str, marker: str) -> str:
+    _, separator, tail = url.partition(marker)
+    return f"{base}/{tail}" if separator else url
+
+
+# Entries carried over from the published index keep the URLs of the repository they were
+# published under, so rebase them onto the current one.
+for ext in final_extensions:
+    ext.resources.apkUrl = rebase(ext.resources.apkUrl, RELEASE_BASE_URL, "/releases/download/")
+    ext.resources.jarUrl = rebase(ext.resources.jarUrl, RELEASE_BASE_URL, "/releases/download/")
+    ext.resources.iconUrl = rebase(ext.resources.iconUrl, ICON_BASE_URL, "@main/")
+
 index = index_pb2.Index(
     name="bigExtensions",
     badgeLabel="BIG",
