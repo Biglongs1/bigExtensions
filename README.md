@@ -7,10 +7,13 @@ Manga sources for [Mihon](https://mihon.app) and forks.
 Open **More → Settings → Browse → Extension repos** and add:
 
 ```
-https://raw.githubusercontent.com/Biglongs1/extensions/repo/index.json
+https://raw.githubusercontent.com/Biglongs1/bigExtensions/repo/index.json
 ```
 
 The app will list every source below. Updates arrive through the same screen.
+
+If you added this repo before it was renamed, remove the old `Biglongs1/extensions`
+URL and add the one above, otherwise updates stop arriving.
 
 Forks lag behind on repo support, so if the app rejects the URL, check that it is
 up to date. Yokai, for instance, only accepts this format from 1.10.0 onwards.
@@ -30,7 +33,7 @@ under the extension settings.
 
 ## Requests
 
-Want a source that is not here? [Open a request](https://github.com/Biglongs1/extensions/issues/new?template=source_request.yml).
+Want a source that is not here? [Open a request](https://github.com/Biglongs1/bigExtensions/issues/new?template=source_request.yml).
 
 Before asking, check that the site is not already covered by [keiyoushi](https://github.com/keiyoushi/extensions), which is a far larger repo and the better home for most sources. This one exists for sources I maintain closely, so requests are accepted based on how reliably I can keep them alive, not on how popular the site is.
 
@@ -42,7 +45,7 @@ A source is unlikely to be accepted when it:
 
 ## Reporting a broken source
 
-Sites change often, and a source that worked yesterday can break without notice. [Report it here](https://github.com/Biglongs1/extensions/issues/new?template=broken_source.yml) with the extension version and what exactly stopped working, since browsing, search and reading tend to break independently of each other.
+Sites change often, and a source that worked yesterday can break without notice. [Report it here](https://github.com/Biglongs1/bigExtensions/issues/new?template=broken_source.yml) with the extension version and what exactly stopped working, since browsing, search and reading tend to break independently of each other.
 
 ## Contributing
 
