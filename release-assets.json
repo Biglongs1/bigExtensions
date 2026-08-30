@@ -1,12 +1,12 @@
 {
   "eu.kanade.tachiyomi.extension.pt.kuromangas": {
     "apk": {
-      "name": "tachiyomi-pt.kuromangas-v1.4.14.apk",
-      "sha256": "eb441c19055d5b6559eec6aa7ab37aae87766eed5fde0282f02ca50fe39c9fa1"
+      "name": "tachiyomi-pt.kuromangas-v1.4.15.apk",
+      "sha256": "148c420de79a95bf05ef1f3af2b70bbf91ce00592b590fe52fccf9ac65590a0f"
     },
     "jar": {
-      "name": "tachiyomi-pt.kuromangas-v1.4.14.jar",
-      "sha256": "8b9eb9045d8ef5eb073bdb8c1aad6b0ebcf316805c1b577687baeadeda6655a5"
+      "name": "tachiyomi-pt.kuromangas-v1.4.15.jar",
+      "sha256": "f5657c91f2f12fe94d6d0724e8948028d174a54a1fddc3e7ed7d40e2ede9e3fb"
     }
   },
   "eu.kanade.tachiyomi.extension.pt.loverstoon": {
