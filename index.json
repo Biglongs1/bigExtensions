@@ -11,9 +11,9 @@
         "name": "KuroMangas",
         "packageName": "eu.kanade.tachiyomi.extension.pt.kuromangas",
         "resources": {
-          "apkUrl": "https://github.com/Biglongs1/extensions/releases/download/1049e5b/tachiyomi-pt.kuromangas-v1.4.15.apk",
+          "apkUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/1049e5b/tachiyomi-pt.kuromangas-v1.4.15.apk",
           "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/bigExtensions@main/src/pt/kuromangas/res/mipmap-xhdpi/ic_launcher.png",
-          "jarUrl": "https://github.com/Biglongs1/extensions/releases/download/1049e5b/tachiyomi-pt.kuromangas-v1.4.15.jar"
+          "jarUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/1049e5b/tachiyomi-pt.kuromangas-v1.4.15.jar"
         },
         "extensionLib": "1.4",
         "versionCode": "15",
@@ -32,9 +32,9 @@
         "name": "LoversToon",
         "packageName": "eu.kanade.tachiyomi.extension.pt.loverstoon",
         "resources": {
-          "apkUrl": "https://github.com/Biglongs1/extensions/releases/download/03dbc15/tachiyomi-pt.loverstoon-v1.6.1.apk",
+          "apkUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/03dbc15/tachiyomi-pt.loverstoon-v1.6.1.apk",
           "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/bigExtensions@main/src/pt/loverstoon/res/mipmap-xhdpi/ic_launcher.png",
-          "jarUrl": "https://github.com/Biglongs1/extensions/releases/download/03dbc15/tachiyomi-pt.loverstoon-v1.6.1.jar"
+          "jarUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/03dbc15/tachiyomi-pt.loverstoon-v1.6.1.jar"
         },
         "extensionLib": "1.6",
         "versionCode": "1",
@@ -53,9 +53,9 @@
         "name": "MangaLivre.org",
         "packageName": "eu.kanade.tachiyomi.extension.pt.mangalivreorg",
         "resources": {
-          "apkUrl": "https://github.com/Biglongs1/extensions/releases/download/1942097/tachiyomi-pt.mangalivreorg-v1.6.9.apk",
+          "apkUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/1942097/tachiyomi-pt.mangalivreorg-v1.6.9.apk",
           "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/bigExtensions@main/src/pt/mangalivreorg/res/mipmap-xhdpi/ic_launcher.png",
-          "jarUrl": "https://github.com/Biglongs1/extensions/releases/download/1942097/tachiyomi-pt.mangalivreorg-v1.6.9.jar"
+          "jarUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/1942097/tachiyomi-pt.mangalivreorg-v1.6.9.jar"
         },
         "extensionLib": "1.6",
         "versionCode": "9",
@@ -74,9 +74,9 @@
         "name": "NoxManga",
         "packageName": "eu.kanade.tachiyomi.extension.pt.remangas",
         "resources": {
-          "apkUrl": "https://github.com/Biglongs1/extensions/releases/download/0812201/tachiyomi-pt.remangas-v1.6.54.apk",
+          "apkUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/0812201/tachiyomi-pt.remangas-v1.6.54.apk",
           "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/bigExtensions@main/src/pt/remangas/res/mipmap-xhdpi/ic_launcher.png",
-          "jarUrl": "https://github.com/Biglongs1/extensions/releases/download/0812201/tachiyomi-pt.remangas-v1.6.54.jar"
+          "jarUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/0812201/tachiyomi-pt.remangas-v1.6.54.jar"
         },
         "extensionLib": "1.6",
         "versionCode": "54",
@@ -95,9 +95,9 @@
         "name": "Yomu Comics",
         "packageName": "eu.kanade.tachiyomi.extension.pt.sssscanlator",
         "resources": {
-          "apkUrl": "https://github.com/Biglongs1/extensions/releases/download/e676249/tachiyomi-pt.sssscanlator-v1.6.62.apk",
+          "apkUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/e676249/tachiyomi-pt.sssscanlator-v1.6.62.apk",
           "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/bigExtensions@main/src/pt/sssscanlator/res/mipmap-xhdpi/ic_launcher.png",
-          "jarUrl": "https://github.com/Biglongs1/extensions/releases/download/e676249/tachiyomi-pt.sssscanlator-v1.6.62.jar"
+          "jarUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/e676249/tachiyomi-pt.sssscanlator-v1.6.62.jar"
         },
         "extensionLib": "1.6",
         "versionCode": "62",
