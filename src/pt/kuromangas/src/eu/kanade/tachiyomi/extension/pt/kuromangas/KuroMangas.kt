@@ -44,18 +44,23 @@ abstract class KuroMangas :
 
     private val decryptor by lazy { KuroMangasDecryptor(baseUrl, network.client, ::relogin) }
 
+    private val apiHost = baseUrl.toHttpUrl().host
+
     override val client by lazy {
 
         network.client.newBuilder()
             .apply {
                 addInterceptor { chain ->
+                    val request = chain.request()
+                    if (request.url.host != apiHost) return@addInterceptor chain.proceed(request)
                     if (!checkLogin()) throw IOException(LOGIN_REQUIRED_MESSAGE)
-                    return@addInterceptor chain.proceed(chain.request())
+                    return@addInterceptor chain.proceed(request)
                 }
 
                 addInterceptor(decryptor.vSecureInterceptor())
             }
-            .rateLimit(2)
+            // Unscoped, this also throttles the CDN, and a chapter is 120 images.
+            .rateLimit(2, shouldLimit = { it.host == apiHost })
             .build()
     }
 
@@ -221,13 +226,17 @@ abstract class KuroMangas :
         return hasSession()
     }
 
-    private fun hasSession(): Boolean = client.getCookie(baseUrl, SESSION_COOKIE) != null
+    // The API rejects a request whose X-Client-Token does not match the token cookie, so a
+    // session without it is useless even though the JWT is still valid.
+    private fun hasSession(): Boolean = client.getCookie(baseUrl, SESSION_COOKIE) != null && client.getCookie(baseUrl, TOKEN_COOKIE) != null
 
-    // Implicit set-cookie: kuro_session
+    // Implicit set-cookie: kuro_session and _kn
     private fun login(email: String, password: String) {
         val payload = buildJsonObject {
             put("email", email)
             put("password", password)
+            // Without it both cookies come back for the session only, forcing a login per app start.
+            put("rememberMe", true)
         }.toString()
         val requestBody = payload.toRequestBody(JSON_MEDIA_TYPE)
         val request = POST("$apiUrl/auth/login", headers, requestBody)
@@ -267,7 +276,6 @@ abstract class KuroMangas :
 
     companion object {
         private const val PAGE_LIMIT = 24
-        private const val API_HOST = "beta.kuromangas.com"
         private const val PREF_EMAIL = "kuromangas_email"
         private const val PREF_PASSWORD = "kuromangas_password"
         private const val SESSION_COOKIE = "kuro_session"

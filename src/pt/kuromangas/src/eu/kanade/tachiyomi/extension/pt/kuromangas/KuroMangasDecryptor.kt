@@ -8,6 +8,7 @@ import keiyoushi.utils.readIntBigEndian
 import keiyoushi.utils.readIntLittleEndian
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.jsonObject
+import okhttp3.HttpUrl.Companion.toHttpUrl
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -35,7 +36,15 @@ class KuroMangasDecryptor(
 ) {
     private var viteApiEncKey: String? = DEFAULT_ENC_KEY
 
+    private val apiHost by lazy { baseUrl.toHttpUrl().host }
+
     fun vSecureInterceptor() = Interceptor { chain ->
+
+        // Images come from the CDN: they carry no payload to decrypt, and a failed one must not
+        // be mistaken for an expired session.
+        if (chain.request().url.host != apiHost) {
+            return@Interceptor chain.proceed(chain.request())
+        }
 
         fun newRequest(): Request {
             val request = chain.request()
