@@ -8,6 +8,27 @@
   "extensionList": {
     "extensions": [
       {
+        "name": "AstraToons",
+        "packageName": "eu.kanade.tachiyomi.extension.pt.astratoons",
+        "resources": {
+          "apkUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/a606619/tachiyomi-pt.astratoons-v1.6.1.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/bigExtensions@main/src/pt/astratoons/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/a606619/tachiyomi-pt.astratoons-v1.6.1.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "1",
+        "versionName": "1.6.1",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "568706475308881719",
+            "name": "AstraToons",
+            "language": "pt-BR",
+            "homeUrl": "https://astratoons.com"
+          }
+        ]
+      },
+      {
         "name": "KuroMangas",
         "packageName": "eu.kanade.tachiyomi.extension.pt.kuromangas",
         "resources": {
@@ -50,6 +71,27 @@
         ]
       },
       {
+        "name": "MangaLivre.blog",
+        "packageName": "eu.kanade.tachiyomi.extension.pt.mangalivreblog",
+        "resources": {
+          "apkUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/a606619/tachiyomi-pt.mangalivreblog-v1.6.1.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/bigExtensions@main/src/pt/mangalivreblog/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/a606619/tachiyomi-pt.mangalivreblog-v1.6.1.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "1",
+        "versionName": "1.6.1",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "185602996997722921",
+            "name": "MangaLivre.blog",
+            "language": "pt-BR",
+            "homeUrl": "https://mangalivre.blog"
+          }
+        ]
+      },
+      {
         "name": "MangaLivre.org",
         "packageName": "eu.kanade.tachiyomi.extension.pt.mangalivreorg",
         "resources": {
@@ -67,6 +109,69 @@
             "name": "MangaLivre.org",
             "language": "pt-BR",
             "homeUrl": "https://mangalivre.org"
+          }
+        ]
+      },
+      {
+        "name": "MangaStop",
+        "packageName": "eu.kanade.tachiyomi.extension.pt.mangastop",
+        "resources": {
+          "apkUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/a606619/tachiyomi-pt.mangastop-v1.6.1.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/bigExtensions@main/src/pt/mangastop/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/a606619/tachiyomi-pt.mangastop-v1.6.1.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "1",
+        "versionName": "1.6.1",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "4122351080341849347",
+            "name": "MangaStop",
+            "language": "pt-BR",
+            "homeUrl": "https://mangastop.net"
+          }
+        ]
+      },
+      {
+        "name": "MangoToons",
+        "packageName": "eu.kanade.tachiyomi.extension.pt.mangotoons",
+        "resources": {
+          "apkUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/a606619/tachiyomi-pt.mangotoons-v1.6.1.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/bigExtensions@main/src/pt/mangotoons/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/a606619/tachiyomi-pt.mangotoons-v1.6.1.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "1",
+        "versionName": "1.6.1",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "8314531811881566965",
+            "name": "MangoToons",
+            "language": "pt-BR",
+            "homeUrl": "https://mangotoons.com"
+          }
+        ]
+      },
+      {
+        "name": "Nexus Mang\u00e1s",
+        "packageName": "eu.kanade.tachiyomi.extension.pt.nexusmangas",
+        "resources": {
+          "apkUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/a606619/tachiyomi-pt.nexusmangas-v1.6.1.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/bigExtensions@main/src/pt/nexusmangas/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/a606619/tachiyomi-pt.nexusmangas-v1.6.1.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "1",
+        "versionName": "1.6.1",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "3647960912061862872",
+            "name": "Nexus Mang\u00e1s",
+            "language": "pt-BR",
+            "homeUrl": "https://www.nexusmangas.com"
           }
         ]
       },
