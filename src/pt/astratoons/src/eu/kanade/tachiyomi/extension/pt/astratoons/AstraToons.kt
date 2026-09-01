@@ -126,7 +126,7 @@ abstract class AstraToons : KeiSource() {
             page++
         }
 
-        return chapters.distinctBy(SChapter::url)
+        return chapters.distinctBy(SChapter::url).sortedByDescending(SChapter::chapter_number)
     }
 
     private fun Element.toSChapterOrNull(mangaUrl: String): SChapter? {

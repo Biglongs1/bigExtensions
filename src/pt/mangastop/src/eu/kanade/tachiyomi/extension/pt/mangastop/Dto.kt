@@ -98,7 +98,7 @@ class MangaDto(
         }
     }
 
-    val chapterList get() = chapters.map(ChapterDto::toSChapter)
+    val chapterList get() = chapters.map(ChapterDto::toSChapter).sortedByDescending(SChapter::chapter_number)
 }
 
 @Serializable

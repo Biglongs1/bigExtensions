@@ -108,8 +108,25 @@ abstract class MangaLivreBlog : KeiSource() {
         return SMangaUpdate(
             manga = document.toSManga(manga.url),
             chapters = document.select("ul.chapters-list li.chapter-item a.chapter-link")
-                .mapNotNull(::toSChapterOrNull),
+                .mapNotNull(::toSChapterOrNull)
+                .disambiguated()
+                .sortedByDescending(SChapter::chapter_number),
         )
+    }
+
+    /**
+     * The site publishes reuploads under the same label, so several entries read "Capítulo 303".
+     * Number them so they stay distinguishable in the chapter list.
+     */
+    private fun List<SChapter>.disambiguated(): List<SChapter> {
+        val counts = groupingBy(SChapter::name).eachCount()
+        val seen = mutableMapOf<String, Int>()
+
+        return map { chapter ->
+            if (counts[chapter.name] == 1) return@map chapter
+            val index = seen.merge(chapter.name, 1, Int::plus)!!
+            chapter.apply { name = "$name (v$index)" }
+        }
     }
 
     private fun Document.toSManga(mangaUrl: String) = SManga.create().apply {

@@ -56,7 +56,7 @@ class WorkDto(
         }
     }
 
-    val chapterList get() = chapters.map { it.toSChapter(slug) }
+    val chapterList get() = chapters.map { it.toSChapter(slug) }.sortedByDescending(SChapter::chapter_number)
 }
 
 @Serializable
