@@ -22,6 +22,7 @@ up to date. Yokai, for instance, only accepts this format from 1.10.0 onwards.
 
 | Source | Language | Notes |
 | --- | --- | --- |
+| AstraToons | pt-BR | |
 | KuroMangas | pt-BR | Requires an account |
 | LoversToon | pt-BR | |
 | MangaLivre.org | pt-BR | |
