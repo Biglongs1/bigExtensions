@@ -28,6 +28,7 @@ up to date. Yokai, for instance, only accepts this format from 1.10.0 onwards.
 | MangaLivre.blog | pt-BR | |
 | MangaLivre.org | pt-BR | |
 | MangaStop | pt-BR | |
+| Nexus Mangás | pt-BR | |
 | NoxManga | pt-BR | |
 | Yomu Comics | pt-BR | Requires an account |
 
