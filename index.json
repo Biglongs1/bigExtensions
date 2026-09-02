@@ -204,14 +204,14 @@
         "name": "Aura Toons",
         "packageName": "eu.kanade.tachiyomi.extension.pt.auratoonsbr",
         "resources": {
-          "apkUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/2807c97/tachiyomi-pt.auratoonsbr-v1.6.2.apk",
+          "apkUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/50cd4ea/tachiyomi-pt.auratoonsbr-v1.6.3.apk",
           "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/bigExtensions@main/src/pt/auratoonsbr/res/mipmap-xhdpi/ic_launcher.png",
-          "jarUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/2807c97/tachiyomi-pt.auratoonsbr-v1.6.2.jar"
+          "jarUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/50cd4ea/tachiyomi-pt.auratoonsbr-v1.6.3.jar"
         },
         "extensionLib": "1.6",
-        "versionCode": "2",
-        "versionName": "1.6.2",
-        "contentWarning": "CONTENT_WARNING_MIXED",
+        "versionCode": "3",
+        "versionName": "1.6.3",
+        "contentWarning": "CONTENT_WARNING_SAFE",
         "sources": [
           {
             "id": "9126442770165696182",
