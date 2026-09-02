@@ -1,4 +1,4 @@
-package eu.kanade.tachiyomi.extension.pt.auratoons
+package eu.kanade.tachiyomi.extension.pt.auratoonsbr
 
 import eu.kanade.tachiyomi.source.model.Filter
 import eu.kanade.tachiyomi.source.model.FilterList
