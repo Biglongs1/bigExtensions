@@ -23,7 +23,9 @@ up to date. Yokai, for instance, only accepts this format from 1.10.0 onwards.
 | Source | Language | Notes |
 | --- | --- | --- |
 | AstraToons | pt-BR | |
+| Asura Scans | en | |
 | Atsumaru | en | |
+| Aura Toons | pt-BR | |
 | Comix | en | |
 | Kagane | en | |
 | KuroMangas | pt-BR | Requires an account |
@@ -34,6 +36,7 @@ up to date. Yokai, for instance, only accepts this format from 1.10.0 onwards.
 | MangaLivre.blog | pt-BR | |
 | MangaLivre.org | pt-BR | |
 | MangaStop | pt-BR | |
+| Mangás Brasuka | pt-BR | |
 | MangoToons | pt-BR | |
 | Nexus Mangás | pt-BR | |
 | NoxManga | pt-BR | |
