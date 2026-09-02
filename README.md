@@ -23,14 +23,21 @@ up to date. Yokai, for instance, only accepts this format from 1.10.0 onwards.
 | Source | Language | Notes |
 | --- | --- | --- |
 | AstraToons | pt-BR | |
+| Atsumaru | en | |
+| Comix | en | |
+| Kagane | en | |
 | KuroMangas | pt-BR | Requires an account |
 | LoversToon | pt-BR | |
+| MangaBall | en | |
+| MangaDot | en | |
+| MangaFire | en | |
 | MangaLivre.blog | pt-BR | |
 | MangaLivre.org | pt-BR | |
 | MangaStop | pt-BR | |
 | MangoToons | pt-BR | |
 | Nexus Mangás | pt-BR | |
 | NoxManga | pt-BR | |
+| OniSaga | en | |
 | Yomu Comics | pt-BR | Requires an account |
 
 Sources marked as requiring an account read nothing until you fill in the credentials
