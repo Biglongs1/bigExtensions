@@ -8,7 +8,6 @@ internal class AuraFilters(private val data: FilterDataDto?) {
     fun getFilterList() = FilterList(
         buildList {
             add(SortFilter())
-            add(AdultFilter())
             add(Filter.Separator())
             add(StatusFilter())
             add(TypeFilter())
@@ -45,7 +44,7 @@ internal fun FilterList.toSearchOptions(): SearchOptions {
             yearTo = firstInstanceOrNull<YearToFilter>()?.state.orEmpty().trim(),
             chaptersMin = firstInstanceOrNull<ChaptersMinFilter>()?.state.orEmpty().trim(),
             chaptersMax = firstInstanceOrNull<ChaptersMaxFilter>()?.state.orEmpty().trim(),
-            adult = firstInstanceOrNull<AdultFilter>()?.selectedValue ?: "Ocultar",
+            adult = "Ocultar",
         ),
         sortBy = sort?.sortBy ?: "updatedAt",
         sortDir = sort?.sortDir ?: "desc",
@@ -71,16 +70,6 @@ private open class SelectFilter(
 ) : Filter.Select<String>(name, options.map(Option::label).toTypedArray()) {
     val selectedValue get() = options[state].value
 }
-
-private class AdultFilter :
-    SelectFilter(
-        "Conteúdo adulto",
-        listOf(
-            Option("Ocultar", "Ocultar"),
-            Option("Incluir", "Incluir"),
-            Option("Somente 18+", "Somente 18+"),
-        ),
-    )
 
 private class CategoryModeFilter :
     SelectFilter(

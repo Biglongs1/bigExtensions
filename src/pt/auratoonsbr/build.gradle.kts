@@ -6,8 +6,8 @@ plugins {
 
 keiyoushi {
     name = "Aura Toons"
-    versionCode = 2
-    contentWarning = ContentWarning.MIXED
+    versionCode = 3
+    contentWarning = ContentWarning.SAFE
     libVersion = "1.6"
 
     source {
