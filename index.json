@@ -8,6 +8,157 @@
   "extensionList": {
     "extensions": [
       {
+        "name": "Atsumaru",
+        "packageName": "eu.kanade.tachiyomi.extension.en.atsumaru",
+        "resources": {
+          "apkUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/d94bedb/tachiyomi-en.atsumaru-v1.6.1.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/bigExtensions@main/src/en/atsumaru/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/d94bedb/tachiyomi-en.atsumaru-v1.6.1.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "1",
+        "versionName": "1.6.1",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "6354986011843597399",
+            "name": "Atsumaru",
+            "language": "en",
+            "homeUrl": "https://atsu.moe"
+          }
+        ]
+      },
+      {
+        "name": "Comix",
+        "packageName": "eu.kanade.tachiyomi.extension.en.comix",
+        "resources": {
+          "apkUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/d94bedb/tachiyomi-en.comix-v1.6.37.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/bigExtensions@main/src/en/comix/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/d94bedb/tachiyomi-en.comix-v1.6.37.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "37",
+        "versionName": "1.6.37",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "7537715367149829912",
+            "name": "Comix",
+            "language": "en",
+            "homeUrl": "https://comix.to",
+            "mirrorUrls": [
+              "https://comix.to",
+              "https://comix.ws"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kagane",
+        "packageName": "eu.kanade.tachiyomi.extension.en.kagane",
+        "resources": {
+          "apkUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/d94bedb/tachiyomi-en.kagane-v1.6.31.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/bigExtensions@main/src/en/kagane/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/d94bedb/tachiyomi-en.kagane-v1.6.31.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "31",
+        "versionName": "1.6.31",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "4024736764982024684",
+            "name": "Kagane",
+            "language": "en",
+            "homeUrl": "https://kagane.to"
+          }
+        ]
+      },
+      {
+        "name": "MangaBall",
+        "packageName": "eu.kanade.tachiyomi.extension.en.mangaball",
+        "resources": {
+          "apkUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/d94bedb/tachiyomi-en.mangaball-v1.6.1.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/bigExtensions@main/src/en/mangaball/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/d94bedb/tachiyomi-en.mangaball-v1.6.1.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "1",
+        "versionName": "1.6.1",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "4778354629668307586",
+            "name": "MangaBall",
+            "language": "en",
+            "homeUrl": "https://mangaball.net"
+          }
+        ]
+      },
+      {
+        "name": "MangaDot",
+        "packageName": "eu.kanade.tachiyomi.extension.en.mangadot",
+        "resources": {
+          "apkUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/d94bedb/tachiyomi-en.mangadot-v1.6.1.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/bigExtensions@main/src/en/mangadot/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/d94bedb/tachiyomi-en.mangadot-v1.6.1.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "1",
+        "versionName": "1.6.1",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "1510817062915473461",
+            "name": "MangaDot",
+            "language": "en",
+            "homeUrl": "https://mangadot.net"
+          }
+        ]
+      },
+      {
+        "name": "MangaFire",
+        "packageName": "eu.kanade.tachiyomi.extension.en.mangafire",
+        "resources": {
+          "apkUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/d94bedb/tachiyomi-en.mangafire-v1.6.32.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/bigExtensions@main/src/en/mangafire/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/d94bedb/tachiyomi-en.mangafire-v1.6.32.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "32",
+        "versionName": "1.6.32",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "6084907896154116083",
+            "name": "MangaFire",
+            "language": "en",
+            "homeUrl": "https://mangafire.to"
+          }
+        ]
+      },
+      {
+        "name": "OniSaga",
+        "packageName": "eu.kanade.tachiyomi.extension.en.onisaga",
+        "resources": {
+          "apkUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/d94bedb/tachiyomi-en.onisaga-v1.6.4.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/bigExtensions@main/src/en/onisaga/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/d94bedb/tachiyomi-en.onisaga-v1.6.4.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "4",
+        "versionName": "1.6.4",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "2644848669022862951",
+            "name": "OniSaga",
+            "language": "en",
+            "homeUrl": "https://onisaga.com"
+          }
+        ]
+      },
+      {
         "name": "AstraToons",
         "packageName": "eu.kanade.tachiyomi.extension.pt.astratoons",
         "resources": {
