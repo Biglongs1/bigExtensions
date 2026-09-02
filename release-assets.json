@@ -89,14 +89,14 @@
       "sha256": "db64d90f255f3db4c968b244651bf79de548b365e47a16db2db2c979dd3dd1d5"
     }
   },
-  "eu.kanade.tachiyomi.extension.pt.auratoons": {
+  "eu.kanade.tachiyomi.extension.pt.auratoonsbr": {
     "apk": {
-      "name": "tachiyomi-pt.auratoons-v1.6.1.apk",
-      "sha256": "56f44fb20df6d779aece948d414a629a86d7219d369b8eb38c586fc6ae90d104"
+      "name": "tachiyomi-pt.auratoonsbr-v1.6.2.apk",
+      "sha256": "e79e478c735b7dbe799c22ade06fc6c5ebdb7df8ceb59cc75ed81689896ca562"
     },
     "jar": {
-      "name": "tachiyomi-pt.auratoons-v1.6.1.jar",
-      "sha256": "cae7b294cc98c471f61a224da2635b14b02184a3edd630cd4e5d0284d3507676"
+      "name": "tachiyomi-pt.auratoonsbr-v1.6.2.jar",
+      "sha256": "8b30ba6d852345b1cc27d4e7af97a1616a338bac2a5d437ef5d13f9f6be0c842"
     }
   },
   "eu.kanade.tachiyomi.extension.pt.kuromangas": {
