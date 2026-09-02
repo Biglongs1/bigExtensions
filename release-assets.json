@@ -1,4 +1,14 @@
 {
+  "eu.kanade.tachiyomi.extension.en.asurascans": {
+    "apk": {
+      "name": "tachiyomi-en.asurascans-v1.6.70.apk",
+      "sha256": "ec02d079dbb7c3e15ec1ba6ffa5888d627563f0c443ece882277360528a38792"
+    },
+    "jar": {
+      "name": "tachiyomi-en.asurascans-v1.6.70.jar",
+      "sha256": "15a38aec20978e5e2c63fd0fd144b392213e28c3287f747c42d181fa44ee246d"
+    }
+  },
   "eu.kanade.tachiyomi.extension.en.atsumaru": {
     "apk": {
       "name": "tachiyomi-en.atsumaru-v1.6.1.apk",
@@ -79,6 +89,16 @@
       "sha256": "db64d90f255f3db4c968b244651bf79de548b365e47a16db2db2c979dd3dd1d5"
     }
   },
+  "eu.kanade.tachiyomi.extension.pt.auratoons": {
+    "apk": {
+      "name": "tachiyomi-pt.auratoons-v1.6.1.apk",
+      "sha256": "56f44fb20df6d779aece948d414a629a86d7219d369b8eb38c586fc6ae90d104"
+    },
+    "jar": {
+      "name": "tachiyomi-pt.auratoons-v1.6.1.jar",
+      "sha256": "cae7b294cc98c471f61a224da2635b14b02184a3edd630cd4e5d0284d3507676"
+    }
+  },
   "eu.kanade.tachiyomi.extension.pt.kuromangas": {
     "apk": {
       "name": "tachiyomi-pt.kuromangas-v1.4.15.apk",
@@ -117,6 +137,16 @@
     "jar": {
       "name": "tachiyomi-pt.mangalivreorg-v1.6.9.jar",
       "sha256": "75390d83b2f8e3bf399514d9a7a16ef5ad33d530603a982e85ec7e4e5cfb694c"
+    }
+  },
+  "eu.kanade.tachiyomi.extension.pt.mangasbrasuka": {
+    "apk": {
+      "name": "tachiyomi-pt.mangasbrasuka-v1.6.57.apk",
+      "sha256": "c2aefeefaffe74488256a67e1de04f48cafa50ba39fde3a6f159202070a0ca02"
+    },
+    "jar": {
+      "name": "tachiyomi-pt.mangasbrasuka-v1.6.57.jar",
+      "sha256": "82d7e4cb008d7ddd55090f1c059d3c397da0741c1fba56d1d873e56c595b859e"
     }
   },
   "eu.kanade.tachiyomi.extension.pt.mangastop": {

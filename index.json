@@ -8,6 +8,27 @@
   "extensionList": {
     "extensions": [
       {
+        "name": "Asura Scans",
+        "packageName": "eu.kanade.tachiyomi.extension.en.asurascans",
+        "resources": {
+          "apkUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/aaae112/tachiyomi-en.asurascans-v1.6.70.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/bigExtensions@main/src/en/asurascans/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/aaae112/tachiyomi-en.asurascans-v1.6.70.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "70",
+        "versionName": "1.6.70",
+        "contentWarning": "CONTENT_WARNING_SAFE",
+        "sources": [
+          {
+            "id": "6247824327199706550",
+            "name": "Asura Scans",
+            "language": "en",
+            "homeUrl": "https://asurascans.com"
+          }
+        ]
+      },
+      {
         "name": "Atsumaru",
         "packageName": "eu.kanade.tachiyomi.extension.en.atsumaru",
         "resources": {
@@ -180,6 +201,27 @@
         ]
       },
       {
+        "name": "Aura Toons",
+        "packageName": "eu.kanade.tachiyomi.extension.pt.auratoons",
+        "resources": {
+          "apkUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/aaae112/tachiyomi-pt.auratoons-v1.6.1.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/bigExtensions@main/src/pt/auratoons/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/aaae112/tachiyomi-pt.auratoons-v1.6.1.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "1",
+        "versionName": "1.6.1",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "6513968363934843007",
+            "name": "Aura Toons",
+            "language": "pt-BR",
+            "homeUrl": "https://auratoons.com"
+          }
+        ]
+      },
+      {
         "name": "KuroMangas",
         "packageName": "eu.kanade.tachiyomi.extension.pt.kuromangas",
         "resources": {
@@ -260,6 +302,27 @@
             "name": "MangaLivre.org",
             "language": "pt-BR",
             "homeUrl": "https://mangalivre.org"
+          }
+        ]
+      },
+      {
+        "name": "Mangas Brasuka",
+        "packageName": "eu.kanade.tachiyomi.extension.pt.mangasbrasuka",
+        "resources": {
+          "apkUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/aaae112/tachiyomi-pt.mangasbrasuka-v1.6.57.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/bigExtensions@main/src/pt/mangasbrasuka/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/aaae112/tachiyomi-pt.mangasbrasuka-v1.6.57.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "57",
+        "versionName": "1.6.57",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "9021069622172695017",
+            "name": "Mangas Brasuka",
+            "language": "pt-BR",
+            "homeUrl": "https://mangasbrasuka.org"
           }
         ]
       },
