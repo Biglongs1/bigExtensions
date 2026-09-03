@@ -25,6 +25,7 @@ up to date. Yokai, for instance, only accepts this format from 1.10.0 onwards.
 | AstraToons | pt-BR | |
 | Asura Scans | en | |
 | Atsumaru | en | |
+| Aura Toons | pt-BR | |
 | Comix | en | |
 | Kagane | en | |
 | KuroMangas | pt-BR | Requires an account |
