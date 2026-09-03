@@ -18,30 +18,36 @@ URL and add the one above, otherwise updates stop arriving.
 Forks lag behind on repo support, so if the app rejects the URL, check that it is
 up to date. Yokai, for instance, only accepts this format from 1.10.0 onwards.
 
+Most sources here are flagged as mixed content because the sites publish adult
+titles alongside regular ones. Mihon and Yokai install those extensions but refuse
+to load them while **Show NSFW sources** is disabled, so the app keeps offering
+Install or Update. Enable **More → Settings → Browse → Show NSFW sources** before
+installing, or pick a source listed as safe below.
+
 ## Sources
 
-| Source | Language | Notes |
-| --- | --- | --- |
-| AstraToons | pt-BR | |
-| Asura Scans | en | |
-| Atsumaru | en | |
-| Aura Toons | pt-BR | |
-| Comix | en | |
-| Kagane | en | |
-| KuroMangas | pt-BR | Requires an account |
-| LoversToon | pt-BR | |
-| MangaBall | en | |
-| MangaDot | en | |
-| MangaFire | en | |
-| MangaLivre.blog | pt-BR | |
-| MangaLivre.org | pt-BR | |
-| MangaStop | pt-BR | |
-| Mangás Brasuka | pt-BR | |
-| MangoToons | pt-BR | |
-| Nexus Mangás | pt-BR | |
-| NoxManga | pt-BR | |
-| OniSaga | en | |
-| Yomu Comics | pt-BR | Requires an account |
+| Source | Language | Content | Notes |
+| --- | --- | --- | --- |
+| AstraToons | pt-BR | Mixed | |
+| Asura Scans | en | Safe | |
+| Atsumaru | en | Mixed | |
+| Aura Toons | pt-BR | Safe | Adult titles are always hidden |
+| Comix | en | Mixed | |
+| Kagane | en | Mixed | |
+| KuroMangas | pt-BR | Safe | Requires an account |
+| LoversToon | pt-BR | Mixed | |
+| MangaBall | en | Mixed | |
+| MangaDot | en | Mixed | |
+| MangaFire | en | Mixed | |
+| MangaLivre.blog | pt-BR | Mixed | |
+| MangaLivre.org | pt-BR | Mixed | |
+| MangaStop | pt-BR | Mixed | |
+| Mangás Brasuka | pt-BR | Mixed | |
+| MangoToons | pt-BR | Mixed | |
+| Nexus Mangás | pt-BR | Mixed | |
+| NoxManga | pt-BR | Mixed | |
+| OniSaga | en | Mixed | |
+| Yomu Comics | pt-BR | Mixed | Requires an account |
 
 Sources marked as requiring an account read nothing until you fill in the credentials
 under the extension settings.
