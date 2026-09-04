@@ -27,6 +27,9 @@ up to date. Yokai, for instance, only accepts this format from 1.10.0 onwards.
 | Atsumaru | en | |
 | Aura Toons | pt-BR | |
 | Comix | en | |
+| CorujaToon | pt-BR | Login available in extension settings or WebView |
+| Imperio da Britannia | pt-BR | |
+| Ink Scan | pt-BR | Requires an account; login through WebView |
 | Kagane | en | |
 | KuroMangas | pt-BR | Requires an account |
 | LoversToon | pt-BR | |
@@ -41,10 +44,13 @@ up to date. Yokai, for instance, only accepts this format from 1.10.0 onwards.
 | Nexus Mangás | pt-BR | |
 | NoxManga | pt-BR | |
 | OniSaga | en | |
+| Vegitoons | pt-BR | |
 | Yomu Comics | pt-BR | Requires an account |
 
-Sources marked as requiring an account read nothing until you fill in the credentials
-under the extension settings.
+KuroMangas and Yomu Comics require credentials under the extension settings.
+For Ink Scan, open the source in WebView, sign in and complete the site's CAPTCHA,
+then return to the app and refresh. The extension reuses and refreshes that session.
+CorujaToon accepts your email or username and password in its settings, or a WebView login.
 
 ## Requests
 
