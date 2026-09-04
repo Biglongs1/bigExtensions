@@ -99,6 +99,36 @@
       "sha256": "1588c96a74f170ae38115904e2be828a33e95ec982c2cc992285b95f55b7c43a"
     }
   },
+  "eu.kanade.tachiyomi.extension.pt.corujatoon": {
+    "apk": {
+      "name": "tachiyomi-pt.corujatoon-v1.6.2.apk",
+      "sha256": "bb6c98adf4ccf6097db843097b8731eb60c3d65b68fce16d7180e2332fdf5cbe"
+    },
+    "jar": {
+      "name": "tachiyomi-pt.corujatoon-v1.6.2.jar",
+      "sha256": "ca617f9fd443ee1a62de96fad933fc78674aa30a7c7b8b892992e758e2c0b44a"
+    }
+  },
+  "eu.kanade.tachiyomi.extension.pt.imperiodabritannia": {
+    "apk": {
+      "name": "tachiyomi-pt.imperiodabritannia-v1.6.2.apk",
+      "sha256": "72761f1a7bcdc89e1fedefc463d5b53c3d4533ee6459bee99915dde970c3f3d7"
+    },
+    "jar": {
+      "name": "tachiyomi-pt.imperiodabritannia-v1.6.2.jar",
+      "sha256": "5d2d962bd502ceb35f81aacbf9418730e1ef1fe79f06c4a0e163be3d46492e19"
+    }
+  },
+  "eu.kanade.tachiyomi.extension.pt.inkscan": {
+    "apk": {
+      "name": "tachiyomi-pt.inkscan-v1.6.2.apk",
+      "sha256": "cf845053ce1153ce5b490dd23601d8a8c559e15636182331b32ebc0996b8335d"
+    },
+    "jar": {
+      "name": "tachiyomi-pt.inkscan-v1.6.2.jar",
+      "sha256": "2e59555bb3b973a3898fe7b89b0f117afa807cfeec5e2a99eee0e6add2b95bc6"
+    }
+  },
   "eu.kanade.tachiyomi.extension.pt.kuromangas": {
     "apk": {
       "name": "tachiyomi-pt.kuromangas-v1.4.15.apk",
@@ -197,6 +227,16 @@
     "jar": {
       "name": "tachiyomi-pt.sssscanlator-v1.6.62.jar",
       "sha256": "f253bd9c3f477a21f02e71013164c1f093fb39fb5e80af529b6d9ba04057c2c1"
+    }
+  },
+  "eu.kanade.tachiyomi.extension.pt.vegitoons": {
+    "apk": {
+      "name": "tachiyomi-pt.vegitoons-v1.6.14.apk",
+      "sha256": "242543972a4afefd7ddf38424ea269054cae6610106d83c44b15aee295816dea"
+    },
+    "jar": {
+      "name": "tachiyomi-pt.vegitoons-v1.6.14.jar",
+      "sha256": "5c116f61d6827efbd5ea921e3115d953a77a5eebbbbeed19de07738f0788ec95"
     }
   }
 }

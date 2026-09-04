@@ -222,6 +222,69 @@
         ]
       },
       {
+        "name": "CorujaToon",
+        "packageName": "eu.kanade.tachiyomi.extension.pt.corujatoon",
+        "resources": {
+          "apkUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/92524f1/tachiyomi-pt.corujatoon-v1.6.2.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/bigExtensions@main/src/pt/corujatoon/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/92524f1/tachiyomi-pt.corujatoon-v1.6.2.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "2",
+        "versionName": "1.6.2",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "3746809004727795505",
+            "name": "CorujaToon",
+            "language": "pt-BR",
+            "homeUrl": "https://corujatoon.com"
+          }
+        ]
+      },
+      {
+        "name": "Imperio da Britannia",
+        "packageName": "eu.kanade.tachiyomi.extension.pt.imperiodabritannia",
+        "resources": {
+          "apkUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/92524f1/tachiyomi-pt.imperiodabritannia-v1.6.2.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/bigExtensions@main/src/pt/imperiodabritannia/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/92524f1/tachiyomi-pt.imperiodabritannia-v1.6.2.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "2",
+        "versionName": "1.6.2",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "8503132573578747741",
+            "name": "Imperio da Britannia",
+            "language": "pt-BR",
+            "homeUrl": "https://imperiodabritannia.net"
+          }
+        ]
+      },
+      {
+        "name": "Ink Scan",
+        "packageName": "eu.kanade.tachiyomi.extension.pt.inkscan",
+        "resources": {
+          "apkUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/92524f1/tachiyomi-pt.inkscan-v1.6.2.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/bigExtensions@main/src/pt/inkscan/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/92524f1/tachiyomi-pt.inkscan-v1.6.2.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "2",
+        "versionName": "1.6.2",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "2060124440831877790",
+            "name": "Ink Scan",
+            "language": "pt-BR",
+            "homeUrl": "https://inkscann.live"
+          }
+        ]
+      },
+      {
         "name": "KuroMangas",
         "packageName": "eu.kanade.tachiyomi.extension.pt.kuromangas",
         "resources": {
@@ -428,6 +491,27 @@
             "name": "Yomu Comics",
             "language": "pt-BR",
             "homeUrl": "https://yomu.com.br"
+          }
+        ]
+      },
+      {
+        "name": "Vegitoons",
+        "packageName": "eu.kanade.tachiyomi.extension.pt.vegitoons",
+        "resources": {
+          "apkUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/92524f1/tachiyomi-pt.vegitoons-v1.6.14.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/bigExtensions@main/src/pt/vegitoons/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/92524f1/tachiyomi-pt.vegitoons-v1.6.14.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "14",
+        "versionName": "1.6.14",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "7104462396017692362",
+            "name": "Vegitoons",
+            "language": "pt-BR",
+            "homeUrl": "https://vegitoons.black"
           }
         ]
       }
