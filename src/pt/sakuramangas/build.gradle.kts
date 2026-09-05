@@ -6,7 +6,7 @@ plugins {
 
 keiyoushi {
     name = "Sakura Mangás"
-    versionCode = 4
+    versionCode = 5
     contentWarning = ContentWarning.MIXED
     libVersion = "1.6"
 
@@ -22,5 +22,7 @@ keiyoushi {
 }
 
 dependencies {
-    compileOnly("androidx.webkit:webkit:1.15.0")
+    implementation("androidx.webkit:webkit:1.15.0") {
+        exclude(group = "org.jetbrains.kotlin")
+    }
 }

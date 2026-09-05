@@ -43,7 +43,7 @@ internal class Access {
                         }
                     }
                 } else {
-                    throw IOException("Atualize o aplicativo e o Android System WebView para acessar o Sakura Mangás.")
+                    throw IOException("Atualize o Android System WebView para acessar o Sakura Mangás.")
                 }
             }
         }
