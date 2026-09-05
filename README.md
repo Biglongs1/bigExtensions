@@ -44,6 +44,7 @@ up to date. Yokai, for instance, only accepts this format from 1.10.0 onwards.
 | Nexus Mangás | pt-BR | |
 | NoxManga | pt-BR | |
 | OniSaga | en | |
+| Sakura Mangás | pt-BR | |
 | Vegitoons | pt-BR | |
 | Yomu Comics | pt-BR | Requires an account |
 
