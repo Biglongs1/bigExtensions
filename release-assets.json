@@ -221,12 +221,12 @@
   },
   "eu.kanade.tachiyomi.extension.pt.sakuramangas": {
     "apk": {
-      "name": "tachiyomi-pt.sakuramangas-v1.6.4.apk",
-      "sha256": "068fd779b69e2dee6825f96a5ef75ddf8feb6580439adfddbd3e8c3b176f62b2"
+      "name": "tachiyomi-pt.sakuramangas-v1.6.5.apk",
+      "sha256": "db3adda38745f4f5a5c18cb2d2a7e82e67cc55cca1ab6f6c1751a87363985818"
     },
     "jar": {
-      "name": "tachiyomi-pt.sakuramangas-v1.6.4.jar",
-      "sha256": "6887e5401528665ffe50fcbd8ef80a9eec6c2db82a802d7761cb1c3019a52e66"
+      "name": "tachiyomi-pt.sakuramangas-v1.6.5.jar",
+      "sha256": "401828216dd4ee6489acf20ac2aaa6afcd07797844a892d7966ce4eb36cd3eb3"
     }
   },
   "eu.kanade.tachiyomi.extension.pt.sssscanlator": {
