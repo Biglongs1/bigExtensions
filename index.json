@@ -474,6 +474,27 @@
         ]
       },
       {
+        "name": "Sakura Mang\u00e1s",
+        "packageName": "eu.kanade.tachiyomi.extension.pt.sakuramangas",
+        "resources": {
+          "apkUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/fa4c077/tachiyomi-pt.sakuramangas-v1.6.4.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/Biglongs1/bigExtensions@main/src/pt/sakuramangas/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/Biglongs1/bigExtensions/releases/download/fa4c077/tachiyomi-pt.sakuramangas-v1.6.4.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "4",
+        "versionName": "1.6.4",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "5312747352055987615",
+            "name": "Sakura Mang\u00e1s",
+            "language": "pt-BR",
+            "homeUrl": "https://sakuramangas.org"
+          }
+        ]
+      },
+      {
         "name": "Yomu Comics",
         "packageName": "eu.kanade.tachiyomi.extension.pt.sssscanlator",
         "resources": {
